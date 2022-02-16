@@ -1,0 +1,82 @@
+find value of username
+$.[0].username, $.[1].username
+
+find values of all sessionid
+$.[0].student[0].id,$.[0].student[0].id,$.[1].student[1].id,$.[1].student[1].id
+find  last value of sessionid
+$.[1].student[1].id
+
+find username of 1st university
+$.[0].username
+find name of 2nd university
+$.[1].name
+find number of universites in the list
+$.(array[i].username).length
+find all marks of second student of 1st university
+$.array[1].student[1].marks[0],$.array[1].student[1].marks[1],$.array[1].student[1].marks[2]
+find the second state(in the address) value of first student of 1st university
+$.array[0].student[0].address[1].state
+find the ssecond contact value of second student of 2nd university
+$.array[0].student[1].contact[1]
+find all cities of second student of 2nd university
+$.array[0].student[1].city[0],$.array[0].student[1].city[1]
+find names of all students
+$.array[0].student[0].name,$.array[0].student[1].name    
+find contacts of all students
+$.array[0].student[0].contact[0],$.array[0].student[0].contact[1],$.array[0].student[1].contact[0],$.array[0].student[1].contact[1]
+find adresses of first student of 1st university
+first student:
+$.array[0].student[0].address[0].state,$.array[0].student[0].address[0].city,$.array[0].student[0].address[1].state,$.array[0].student[0].address[1].city
+second student:
+$.array[0].student[1].address[0].state,$.array[0].student[1].address[0].city,$.array[0].student[1].address[1].state,$.array[0].student[1].address[1].city,
+find number of adresses of second student of 2nd university
+$.(array[1].student[1].address[i]).length
+find the number of student records of 2nd university
+$.(array[1].student[i]).length
+find the number of contacts of second student of 1st university
+$.(array[1].student[1].contact[i]).length
+university[
+{   "name":"Xyz University",
+    "username":"aa@m.com",
+    "password":"12xyz",
+    "contact":[12234,23345,34542,56345],
+  "students": [
+    {
+      "id": 112,
+      "name": "aana",
+      "marks":[20,25,22],
+      "contact": ["1234","3456"],
+      "adresss":[{"state":"nc","city":"abc"},{"state":"ca","city":"xyz"}]
+    },
+     {
+      "id": 115,
+      "name": "banu",
+      "marks":[20,25,22],
+      "contact": ["4534","3458"],
+      "adresss":[{"state":"nc","city":"abc"},{"state":"ca","city":"xyz"}]
+    }
+  ]
+},
+{   "name":"ABC University",
+    "username":"bb@gmail.com",
+    "password":"12abc",
+    "contact":[45672,73345,94542,36345],
+  "students": [
+    {
+      "id": 134,
+      "name": "john",
+      "marks":[18,25,24],
+      "contact": ["1834","5456"],
+      "adresss":[{"state":"al","city":"abc"},{"state":"al","city":"xyz"}]
+    },
+     {
+      "id": 156,
+      "name": "april",
+      "marks":[25,25,21],
+      "contact": ["2534","9456"],
+      "adresss":[{"state":"va","city":"abc"},{"state":"al","city":"xyz"},{"state":"al","city":"pqr"}]
+    }
+  ]
+}
+]
+
